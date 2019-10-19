@@ -1,0 +1,8 @@
+Folder
+has_many :bookmarks
+:name - string
+
+
+Bookmark
+belongs_to :folder
+:folder_id - integer, :name - string, :link - string, :notes - string
