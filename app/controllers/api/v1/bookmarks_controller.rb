@@ -1,12 +1,19 @@
 class Api::V1::BookmarksController < ApplicationController
 
+    before_action :set_folder
+
     def index
-        @bookmarks = Bookmark.all
+        @bookmarks = @folder.bookmarks
         render json: @bookmarks
     end
 
+    def show
+        @bookmark = @folder.bookmarks.find(id: params[:id])
+        render json: @bookmark
+    end
+
     def create
-        @bookmark = Bookmark.new(bookmark_params)
+        @bookmark = Folder.bookmarks.new(bookmark_params)
         if @bookmark.save
             render json: @bookmark
         else
@@ -14,22 +21,19 @@ class Api::V1::BookmarksController < ApplicationController
         end
     end
 
-    def show
-        @bookmark = Bookmark.find(:id)
-        render json: @bookmark
-    end
-
     def destroy
-        @bookmark = Bookmark.find(:id)
+        @bookmark = @folder.bookmarks.find(id: params[:id])
         @bookmark.destroy
-        render json: {notice: "Bookmark deleted"}
     end
 
     private
 
-    def bookmark_params
-        params.require(:bookmark).permit(:name, :url, :notes)
+    def set_folder
+        @folder = Folder.find(params[:folder_id])
     end
 
+    def bookmark_params
+        params.require(:bookmark).permit(:folder_id, :name, :url, :notes)
+    end
 
 end
