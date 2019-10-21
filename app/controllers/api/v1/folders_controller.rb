@@ -20,8 +20,10 @@ class Api::V1::FoldersController < ApplicationController
     end
 
     def destroy
-        @folder = Folder.find(:id)
-        @folder.destroy
+        folder = Folder.find(params["id"])
+        folder.bookmarks.destroy_all
+        folder.destroy
+        render json: {success: "Folder deleted!"}
     end
 
     private
