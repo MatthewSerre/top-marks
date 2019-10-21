@@ -13,9 +13,9 @@ class Api::V1::BookmarksController < ApplicationController
     end
 
     def create
-        @bookmark = Folder.bookmarks.new(bookmark_params)
+        @bookmark = @folder.bookmarks.new(bookmark_params)
         if @bookmark.save
-            render json: @bookmark
+            render json: @folder
         else
             render json: {error: "Error creating bookmark"}
         end
