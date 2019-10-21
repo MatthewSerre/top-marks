@@ -22,8 +22,10 @@ class Api::V1::BookmarksController < ApplicationController
     end
 
     def destroy
-        @bookmark = @folder.bookmarks.find(id: params[:id])
-        @bookmark.destroy
+        bookmark = Bookmark.find(params["id"])
+        folder = Folder.find(bookmark.folder_id)
+        bookmark.destroy
+        render json: folder
     end
 
     private
