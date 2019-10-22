@@ -1,7 +1,7 @@
 class Api::V1::FoldersController < ApplicationController
 
     def index
-        @folders = Folder.all
+        @folders = Folder.all.order(:name)
         render json: @folders
     end
 
