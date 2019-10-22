@@ -6,6 +6,7 @@ class Api::V1::FoldersController < ApplicationController
     end
 
     def create
+        binding.pry
         @folder = Folder.new(folder_params)
         if @folder.save
             render json: @folder
@@ -29,7 +30,7 @@ class Api::V1::FoldersController < ApplicationController
     private
 
     def folder_params
-        params.require(:folder).permit(:name)
+        params.require(:folder).permit(:name, :description)
     end
 
 end
