@@ -7,6 +7,11 @@ class Api::V1::BookmarksController < ApplicationController
         render json: @bookmarks
     end
 
+    def all_bookmarks
+        @bookmarks = Bookmark.all.order(:name)
+        render json @bookmarks
+    end
+
     def show
         @bookmark = @folder.bookmarks.find(id: params[:id])
         render json: @bookmark

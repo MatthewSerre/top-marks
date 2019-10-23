@@ -6,7 +6,6 @@ class Api::V1::FoldersController < ApplicationController
     end
 
     def create
-        binding.pry
         @folder = Folder.new(folder_params)
         if @folder.save
             render json: @folder
@@ -24,7 +23,8 @@ class Api::V1::FoldersController < ApplicationController
         folder = Folder.find(params["id"])
         folder.bookmarks.destroy_all
         folder.destroy
-        render json: {success: "Folder deleted!"}
+        folders = Folder.all
+        render json: folders
     end
 
     private
