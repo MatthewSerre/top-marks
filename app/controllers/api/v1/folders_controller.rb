@@ -23,8 +23,7 @@ class Api::V1::FoldersController < ApplicationController
         folder = Folder.find(params["id"])
         folder.bookmarks.destroy_all
         folder.destroy
-        folders = Folder.all
-        render json: folders
+        render json: folder
     end
 
     private
