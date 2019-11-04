@@ -2,7 +2,7 @@
 
 ## Front End
 
-This project pairs with a front end application built using React and Redux.  Click [https://www.github.com/MatthewSerre/bookmark-frontend](here) to view the respository for the back end app.
+This project pairs with a front end application built using React and Redux.  Click [here](https://www.github.com/MatthewSerre/bookmark-frontend) to view the respository for the back end app.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
