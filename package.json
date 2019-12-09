@@ -1,0 +1,8 @@
+{
+    "name": "react-and-rails",
+    "scripts": {
+      "build": "cd bookmark-backend && npm install && npm run build && cd ..",
+      "deploy": "cp -a bookmark-backend/build/. public/",
+      "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+    }
+  }
