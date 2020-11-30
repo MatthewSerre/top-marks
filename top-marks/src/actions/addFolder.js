@@ -1,6 +1,7 @@
 export function addFolder(data) {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/folders`, {
+        // localhost
+        fetch(`/api/v1/folders`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
