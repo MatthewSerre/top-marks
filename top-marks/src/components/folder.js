@@ -7,7 +7,7 @@ import BookmarksContainer from '../containers/bookmarksContainer'
 
 const Folder = (props) => {
 
-    let folder = props.folders.filter(folder => folder.id === props.match.params.id)[0]
+    let folder = props.folders.filter(folder => folder.id == props.match.params.id)[0]
 
     return (
         <React.Fragment>
