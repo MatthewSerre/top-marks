@@ -1,7 +1,12 @@
 
 import React from 'react';
 import FoldersContainer from './containers/foldersContainer'
-import { Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import {Navbar, Nav} from "react-bootstrap";
 import About from './components/about'
 import Home from './components/home'
