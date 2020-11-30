@@ -25,7 +25,7 @@ class App extends React.Component {
               <Nav.Link href="/folders/new">Create a New Folder</Nav.Link>
               <Nav.Link href="/bookmarks">All Bookmarks</Nav.Link>
               <Nav.Link href="/folders">My Folders</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar><br />
