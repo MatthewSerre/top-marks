@@ -1,7 +1,7 @@
 export const deleteBookmark = (bookmarkId, folderId) => {
 
     return (dispatch) => {
-        fetch(`http://0.0.0.0:3000/api/v1/folders/${folderId}/bookmarks/${bookmarkId}`, {
+        fetch(`http://localhost:3000/api/v1/folders/${folderId}/bookmarks/${bookmarkId}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

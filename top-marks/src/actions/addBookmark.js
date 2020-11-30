@@ -1,6 +1,6 @@
 export function addBookmark(bookmark, folderId) {
     return (dispatch) => {
-        fetch(`http://0.0.0.0:3000/api/v1/folders/${folderId}/bookmarks`, {
+        fetch(`http://localhost:3000/api/v1/folders/${folderId}/bookmarks`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
