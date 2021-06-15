@@ -7,11 +7,13 @@ Top Marks is a bookmark application consisting of a back-end API written in Ruby
 ## Prerequisites/Installation
 
 1. Install and configure PostgreSQL
-2. Clone the repository
-3. Run `bundle install` or similar in the main directory
-4. Run `rails db:create` and `rails db:migrate`
-5. Run `rails s` to start the back-end
-6. Switch to the `top-marks` directory and run `npm install` and `npm start`
+1. Clone the repository
+1. Switch to the main directory of the repo
+1. Run `bundle install` or similar
+1. Run `rails db:create` and `rails db:migrate`; `rails db:seed` is optional depending on whether you want to test with the data included in `db/seeds.rb`
+1. Run `rails s` to start the back-end
+1. Run `yarn run build`
+1. Switch to the `top-marks` subdirectory and run `yarn run start`
 
 ## Feedback
 

@@ -1,8 +1,8 @@
 {
     "name": "react-and-rails",
     "scripts": {
-      "build": "cd top-marks && npm install && npm run build && cd ..",
+      "build": "cd top-marks && yarn install && yarn run build && cd ..",
       "deploy": "cp -a top-marks/build/. public/",
-      "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+      "postinstall": "yarn run build && yarn run deploy && echo 'Client built!'"
     }
   }
